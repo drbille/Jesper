@@ -1,0 +1,34 @@
+Trail started at 12:50.41 on 7/7/2015
+  Timer reported accuracy within 285 ns
+Trial 0: 
+	Type: 1
+	Start Speed: 4.5 Meters/Sec
+	Trial start to gas release time: -1ms
+	Gas release to brake time: -1ms
+	Total stop time: 3425ms
+	Collision Detected: 1
+
+Trial 1: 
+	Type: 1
+	Start Speed: 9.1 Meters/Sec
+	Trial start to gas release time: -1ms
+	Gas release to brake time: -1ms
+	Total stop time: 22ms
+	Collision Detected: 1
+
+Trial 2: 
+	Type: 1
+	Start Speed: 4.7 Meters/Sec
+	Trial start to gas release time: 1853ms
+	Gas release to brake time: 660ms
+	Total stop time: 3668ms
+	No Collision: 0
+
+Trial 3: 
+	Type: 1
+	Start Speed: 23.5 Meters/Sec
+	Trial start to gas release time: 244ms
+	Gas release to brake time: 148ms
+	Total stop time: 1099ms
+	Collision Detected: 1
+

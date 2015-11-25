@@ -1,0 +1,103 @@
+C:\Users\PM&R\Desktop\Ali\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\CarPerformanceSimulator.exe
+C:\Users\PM&R\Desktop\Ali\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\CarPerformanceSimulator.pdb
+C:\Users\PM&R\Desktop\Ali\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.FormView.resources
+C:\Users\PM&R\Desktop\Ali\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.Properties.Resources.resources
+C:\Users\PM&R\Desktop\Ali\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.csproj.GenerateResource.Cache
+C:\Users\PM&R\Desktop\Ali\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.exe
+C:\Users\PM&R\Desktop\Ali\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.pdb
+C:\Users\PM&R\Desktop\Ali\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.csprojResolveAssemblyReference.cache
+C:\Users\haddadalimh\Google Drive\UROP\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.exe
+C:\Users\haddadalimh\Google Drive\UROP\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.pdb
+C:\Users\haddadalimh\Google Drive\UROP\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\CarPerformanceSimulator.exe
+C:\Users\haddadalimh\Google Drive\UROP\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\CarPerformanceSimulator.pdb
+C:\Users\haddadalimh\Google Drive\UROP\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.csprojResolveAssemblyReference.cache
+C:\Users\haddadalimh\Google Drive\UROP\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.FormView.resources
+C:\Users\haddadalimh\Google Drive\UROP\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.Properties.Resources.resources
+C:\Users\haddadalimh\Google Drive\UROP\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.csproj.GenerateResource.Cache
+C:\Users\haddadalimh\Google Drive\UROP\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\Car.jpg
+C:\Users\haddadalimh\Google Drive\UROP\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\frontCar.jpg
+C:\Users\haddadalimh\Google Drive\UROP\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\baby_sign.jpg
+C:\Users\haddadalimh\Google Drive\UROP\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\deer.jpg
+C:\Users\haddadalimh\Google Drive\UROP\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\stop_sign.jpg
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.exe
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.pdb
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\baby_sign.jpg
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\deer.jpg
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\frontCar.jpg
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\Car.jpg
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\stop_sign.jpg
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\CarPerformanceSimulator.exe
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\CarPerformanceSimulator.pdb
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.csprojResolveAssemblyReference.cache
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.FormView.resources
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.Properties.Resources.resources
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.csproj.GenerateResource.Cache
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.exe
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.pdb
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\baby_sign.jpg
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\deer.jpg
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\frontCar.jpg
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\Car.jpg
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\stop_sign.jpg
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\CarPerformanceSimulator.exe
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\CarPerformanceSimulator.pdb
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.csprojResolveAssemblyReference.cache
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.FormView.resources
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.Properties.Resources.resources
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.csproj.GenerateResource.Cache
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.UserDisplay.resources
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\CarPerformanceSimulator.exe.config
+C:\Users\PM&R\Desktop\Ali\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.InputSettings.resources
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\deer.jpg
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\engineIdleLoopAmp1.wav
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\NeedleBig.png
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\pedestrian.jpg
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\stop_sign.jpg
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\CarPerformanceSimulator.exe.config
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\CarPerformanceSimulator.exe.manifest
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\CarPerformanceSimulator.application
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\CarPerformanceSimulator.exe
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\CarPerformanceSimulator.pdb
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\Microsoft.DirectX.DirectInput.dll
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\Microsoft.Xna.Framework.dll
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\Microsoft.DirectX.DirectInput.xml
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.FormView.resources
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.InputSettings.resources
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.Properties.Resources.resources
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.UserDisplay.resources
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.csproj.GenerateResource.Cache
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.exe.manifest
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.application
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.exe
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.pdb
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.csprojResolveAssemblyReference.cache
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\SpeedometerBlankScaled.png
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\TachometerBlankScaled.png
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\Car.png
+C:\Users\PM&R\Desktop\Ali-Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\CarPerformanceSimulator\bin\Debug\frontCar.png
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\bin\Debug\Car.png
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\bin\Debug\deer.jpg
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\bin\Debug\engineIdleLoopAmp1.wav
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\bin\Debug\frontCar.png
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\bin\Debug\NeedleBig.png
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\bin\Debug\pedestrian.jpg
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\bin\Debug\SpeedometerBlankScaled.png
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\bin\Debug\stop_sign.jpg
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\bin\Debug\TachometerBlankScaled.png
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\bin\Debug\CarPerformanceSimulator.exe.config
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\bin\Debug\CarPerformanceSimulator.exe.manifest
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\bin\Debug\CarPerformanceSimulator.application
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\bin\Debug\CarPerformanceSimulator.exe
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\bin\Debug\CarPerformanceSimulator.pdb
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\bin\Debug\Microsoft.DirectX.DirectInput.dll
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.csprojResolveAssemblyReference.cache
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.FormView.resources
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.InputSettings.resources
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.Properties.Resources.resources
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.UserDisplay.resources
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.csproj.GenerateResource.Cache
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.exe.manifest
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.application
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.exe
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.pdb
+C:\Users\Jakob\Dropbox\Rodseth\Driving Simulator Program - main one (last version)\CarPerformanceSimulator\Home Version\CarPerformanceSimulator\obj\x86\Debug\CarPerformanceSimulator.CognitiveLoadSettings.resources

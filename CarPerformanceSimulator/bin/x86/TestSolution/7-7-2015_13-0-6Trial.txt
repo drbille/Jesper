@@ -1,0 +1,2 @@
+Trail started at 13:0.6 on 7/7/2015
+  Timer reported accuracy within 285 ns
