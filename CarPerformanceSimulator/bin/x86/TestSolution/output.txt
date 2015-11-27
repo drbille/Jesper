@@ -1,0 +1,102 @@
+Trail started at 12:16.32 on 11/27/2015
+  Timer reported 284 ns
+Trial 0: 
+	Type: 0
+	Start Speed: 0 Meters/Sec
+	Trial start to gas moment release time: -1
+	Trial start to gas total release time: 0ms
+	Gas moment release to brake time: -1ms
+	Gas total release to brake time: -1ms
+	Total stop time: 14ms
+	Collision Detected: 0
+
+Trial 1: 
+	Type: 0
+	Start Speed: 25 Meters/Sec
+	Trial start to gas moment release time: 487
+	Trial start to gas total release time: 535ms
+	Gas moment release to brake time: 161ms
+	Gas total release to brake time: 113ms
+	Total stop time: 1271ms
+	Collision Detected: 1
+
+Trial 2: 
+	Type: 0
+	Start Speed: 23.3 Meters/Sec
+	Trial start to gas moment release time: 405
+	Trial start to gas total release time: 421ms
+	Gas moment release to brake time: 112ms
+	Gas total release to brake time: 96ms
+	Total stop time: 2037ms
+	Collision Detected: 0
+
+Trial 3: 
+	Type: 0
+	Start Speed: 23.5 Meters/Sec
+	Trial start to gas moment release time: 455
+	Trial start to gas total release time: 471ms
+	Gas moment release to brake time: 112ms
+	Gas total release to brake time: 96ms
+	Total stop time: 2103ms
+	Collision Detected: 0
+
+Trial 4: 
+	Type: 0
+	Start Speed: 25 Meters/Sec
+	Trial start to gas moment release time: -1
+	Trial start to gas total release time: 0ms
+	Gas moment release to brake time: -1ms
+	Gas total release to brake time: -1ms
+	Total stop time: 2180ms
+	Collision Detected: 0
+
+Trial 5: 
+	Type: 0
+	Start Speed: 23.1 Meters/Sec
+	Trial start to gas moment release time: 0
+	Trial start to gas total release time: 449ms
+	Gas moment release to brake time: 561ms
+	Gas total release to brake time: 112ms
+	Total stop time: 2082ms
+	Collision Detected: 0
+
+Trial 6: 
+	Type: 0
+	Start Speed: 24.5 Meters/Sec
+	Trial start to gas moment release time: 326
+	Trial start to gas total release time: 470ms
+	Gas moment release to brake time: 224ms
+	Gas total release to brake time: 80ms
+	Total stop time: 2182ms
+	Collision Detected: 0
+
+Trial 7: 
+	Type: 0
+	Start Speed: 23.5 Meters/Sec
+	Trial start to gas moment release time: 0
+	Trial start to gas total release time: 441ms
+	Gas moment release to brake time: 569ms
+	Gas total release to brake time: 128ms
+	Total stop time: 2089ms
+	Collision Detected: 0
+
+Trial 8: 
+	Type: 0
+	Start Speed: 22.8 Meters/Sec
+	Trial start to gas moment release time: 0
+	Trial start to gas total release time: 133ms
+	Gas moment release to brake time: 644ms
+	Gas total release to brake time: 511ms
+	Total stop time: 2132ms
+	Collision Detected: 0
+
+Trial 9: 
+	Type: 0
+	Start Speed: 25.5 Meters/Sec
+	Trial start to gas moment release time: 390
+	Trial start to gas total release time: 454ms
+	Gas moment release to brake time: 144ms
+	Gas total release to brake time: 80ms
+	Total stop time: 2230ms
+	Collision Detected: 0
+

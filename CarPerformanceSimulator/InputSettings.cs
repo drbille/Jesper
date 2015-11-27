@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,7 +29,7 @@ namespace CarPerformanceSimulator
         Label[] pollingReadouts;
 
         int[][] extraAxis;
-        byte[][] buttons;
+        int[][] buttons;
 
 
         string[] axisName = new string[6];
@@ -55,10 +56,10 @@ namespace CarPerformanceSimulator
 
         private void InputSelect_SelectedIndexChanged(object sender, EventArgs e)
         {
+            PollingTimer.Enabled = false;
             mainDisplay.setInputSource(this.InputSelect.SelectedIndex);
             if (this.InputSelect.SelectedIndex == 0)
             {
-                PollingTimer.Enabled = false;
                 KeyboardOutput.Visible = false;
                 WheelSelect.Items.Clear();
                 PedalSelect.Items.Clear();
@@ -66,7 +67,7 @@ namespace CarPerformanceSimulator
                 cps = new DeviceCaps[mainDisplay.getNumJoys()];
                 for (int i = 0; i < mainDisplay.getNumJoys(); i++)
                 {
-                    string joy = "Joystick " + (i+1);
+                    string joy = joystick[i].DeviceInformation.ProductName;
                     WheelSelect.Items.Add(joy);
                     PedalSelect.Items.Add(joy);
                     cps[i] = joystick[i].Caps;
@@ -83,7 +84,7 @@ namespace CarPerformanceSimulator
                 PedalSelect.SelectedIndex = mainDisplay.getWheelJoy();
 
                 extraAxis = new int[mainDisplay.getNumJoys()][];
-                buttons = new byte[mainDisplay.getNumJoys()][];
+                buttons = new int[mainDisplay.getNumJoys()][];
                 info = new string[mainDisplay.getNumJoys()];
 
                 controlInitalized = true;
@@ -95,7 +96,6 @@ namespace CarPerformanceSimulator
             }
             else
             {
-                PollingTimer.Enabled = false;
                 pressedKeys = mainDisplay.getPressedKeys();
                 KeyboardOutput.Visible = true;
                 Joystick1Info.Visible = false;
@@ -123,45 +123,8 @@ namespace CarPerformanceSimulator
             else if (mainDisplay.getInputSource() == 0)
             {
                 state = mainDisplay.getJoystickState();
-                for (int i = 0; i < mainDisplay.getNumJoys(); i++)
-                {
-                    info[i] = "Joystick " + i + ": ";
-                    //extraAxis[i] = state[i].GetSlider();
-                    //info[i] += "A: " + extraAxis[i][0] + " ";
-                    //info[i] += " B: " + extraAxis[i][1] + " ";
-                    //Capture Position.
-                    info[i] += " X:" + state[i].X + " ";
-                    info[i] += " Y:" + state[i].Y + " ";
-                    info[i] += " Z:" + state[i].Z + " ";
-
-                    info[i] += " Rx:" + state[i].Rx + " ";
-                    info[i] += " Ry:" + state[i].Ry + " ";
-                    info[i] += " Rz:" + state[i].Rz + " ";
-                    //display axis
-
-                    // number of Axes
-                    info[i] += " Joystick Axis: " + cps[i].NumberAxes;
-                    // number of Buttons
-                    info[i] += " Joystick Buttons: " + cps[i].NumberButtons;
-
-                    info[i] += " Joystick ID: " + joystick[i].Properties.JoystickId;
-
-                    //info[i] += " Joystick AxisMAX: " + joystick[i].Properties.GetRange(ParameterHow.ByOffset, joystick[i].Properties.JoystickId).Max;
-
-                    //Capture Buttons.
-                    buttons[i] = state[i].GetButtons();
-                    for (int j = 0; j < buttons[i].Length; j++)
-                    {
-                        if (buttons[i][j] != 0)
-                        {
-                            info[i] += "Button:" + j + " ";
-                        }
-                    }
-                    //display joystick settings
-                    pollingReadouts[i].Text = info[i];
-                }
-
-
+                updateFields(0, WheelSelect.SelectedIndex);
+                updateFields(1, PedalSelect.SelectedIndex);
 
                 if (axisNotFound)
                 {
@@ -206,6 +169,55 @@ namespace CarPerformanceSimulator
                     }
                 }
             }
+        }
+
+        private void updateFields(int field, int joy)
+        {
+            info[field] = "Joystick " + joy + ": ";
+            //extraAxis[i] = state[i].GetSlider();
+            //info[i] += "A: " + extraAxis[i][0] + " ";
+            //info[i] += " B: " + extraAxis[i][1] + " ";
+            //Capture Position.
+            info[field] += " X:" + state[joy].X + " ";
+            info[field] += " Y:" + state[joy].Y + " ";
+            info[field] += " Z:" + state[joy].Z + " ";
+
+            info[field] += " Rx:" + state[joy].Rx + " ";
+            info[field] += " Ry:" + state[joy].Ry + " ";
+            info[field] += " Rz:" + state[joy].Rz + " ";
+            //display axis
+
+            // number of Axes
+            info[field] += " Joystick Axis: " + cps[joy].NumberAxes;
+            // number of Buttons
+            info[field] += " Joystick Buttons: " + cps[joy].NumberButtons;
+
+            info[field] += " Joystick ID: " + joystick[joy].Properties.JoystickId;
+
+            //info[i] += " Joystick AxisMAX: " + joystick[i].Properties.GetRange(ParameterHow.ByOffset, joystick[i].Properties.JoystickId).Max;
+
+            //Capture Buttons.
+            try
+            {
+                if (state[joy].GetButtons().Length != 0)
+                {
+                    buttons[joy] = Array.ConvertAll<byte, int>(state[joy].GetButtons(), c => (int)c);
+
+                    for (int j = 0; j < cps[joy].NumberButtons; j++)
+                    {
+                        if (buttons[joy][j] != 0)
+                        {
+                            info[field] += "Button:" + j + " ";
+                        }
+                    }
+                }
+            }
+            catch(NullReferenceException nullex)
+            {
+                Console.Out.WriteLine(nullex.ToString());
+            }
+            //display joystick settings
+            pollingReadouts[field].Text = info[field];
         }
 
         private void autoDetect()
@@ -287,14 +299,21 @@ namespace CarPerformanceSimulator
 
         private void WheelSelect_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(controlInitalized)
-            mainDisplay.setWheelJoy(WheelSelect.SelectedIndex);
+            if (controlInitalized)
+            {
+                mainDisplay.setWheelJoy(WheelSelect.SelectedIndex);
+                state = mainDisplay.getJoystickState();
+            }
+
         }
 
         private void PedalSelect_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (controlInitalized)
+            {
                 mainDisplay.setPedalJoy(PedalSelect.SelectedIndex);
+                state = mainDisplay.getJoystickState();
+            }
         }
 
         

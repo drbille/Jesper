@@ -579,7 +579,7 @@ namespace CarPerformanceSimulator
                                 }
                                 else if (cogLoadMoveLeft && cogLoadMoveRight)
                                 {
-                                    cogLeftOrRight = true;
+                                    //cogLeftOrRight = true;
                                     Random ran = new Random();
                                     if (ran.Next() % 2 == 0)
                                     {
@@ -1019,12 +1019,11 @@ namespace CarPerformanceSimulator
             }
             else if (selectedInput == (int)inputSelection.joystick)
             {
-                joystickInterface.poll();
-                for (int i = 0; i < joystickInterface.getNumJoysticks(); i++)
-                {
-                    joystickState[i] = joystickInterface.getState(i);
-                }
+                joystickInterface.poll(wheelJoy);
+                joystickInterface.poll(pedalJoy);
 
+                joystickState[wheelJoy] = joystickInterface.getState(wheelJoy);
+                joystickState[pedalJoy] = joystickInterface.getState(pedalJoy);
 
                 degree = ((double)steeringSensitivity / 50.0) * (((((int)joystickState[wheelJoy].GetType().GetProperty(drivingAxis).GetValue(joystickState[wheelJoy], null) - (joyAxisMax[wheelJoy] / 2)) * 60.0)) / joyAxisMax[wheelJoy]);//SO MUCH OVERHEAD, EXPLORE ALTERNATIVES *ToDo
                 byte[] buttons = joystickState[wheelJoy].GetButtons();
@@ -1197,6 +1196,8 @@ namespace CarPerformanceSimulator
         public JoystickState[] getJoystickState()
         {
             JoystickState[] state = joystickState;
+            state[wheelJoy] = joystickInterface.getState(wheelJoy);
+            state[pedalJoy] = joystickInterface.getState(pedalJoy);
             return state;
         }
 

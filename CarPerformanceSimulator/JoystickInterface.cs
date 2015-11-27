@@ -13,16 +13,14 @@ namespace CarPerformanceSimulator
         DeviceList gameControllerList = Manager.GetDevices(DeviceClass.GameControl, EnumDevicesFlags.AttachedOnly);
         private JoystickState[] state;
 
-        public void poll()
+        public void poll(int joy)
         {
-            for (int i = 0; i < gameControllerList.Count; i++)
-            {
-                try
-                {
+            try
+                { 
                     // poll the joystick
-                    joystick[i].Poll();
-                    // update the joystick state field
-                    UpdateJoystick(i);
+                    joystick[joy].Poll();
+                // update the joystick state field
+                UpdateJoystick(joy);
                 }
                 catch (Exception err)
                 {
@@ -30,7 +28,6 @@ namespace CarPerformanceSimulator
                     // was it unplugged or locked by another application?
                     //Debug.WriteLine("Joystick Connection Lost");
                 }
-            }
         }
 
         private void UpdateJoystick(int index)
