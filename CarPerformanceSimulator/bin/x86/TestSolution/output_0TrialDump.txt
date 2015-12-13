@@ -1,4 +1,5 @@
 Thrtl	Brke	WjlDeg	DGear	RGear	Vel	LaneDev	RT	Col	Time
+<<<<<<< HEAD
 4.413	0	0.016	128	0	0.025	289	0	False	44721
 12.746	0	0.016	128	0	0.031	289	0	False	44742
 25.098	0	0.016	128	0	0.044	289	0	False	44752
@@ -11052,3 +11053,5 @@ Thrtl	Brke	WjlDeg	DGear	RGear	Vel	LaneDev	RT	Col	Time
 0	0	0.155	0	0	0	279.93	0	False	221520
 0	0	0.155	0	0	0	279.93	0	False	221536
 0	0	0.155	0	0	0	279.93	0	False	221552
+=======
+>>>>>>> master

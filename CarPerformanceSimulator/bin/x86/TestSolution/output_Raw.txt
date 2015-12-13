@@ -1,4 +1,5 @@
 Trial	Type	StartSpeed	GasMRel	GasTRel	GasMBrake	GasTBrake	WheelTurn	TotalStop	Collision	
+<<<<<<< HEAD
 0	0	0		-1		0		-1		-1			14		0
 
 1	0	25		487		535		161		113			1271		1
@@ -19,3 +20,5 @@ Trial	Type	StartSpeed	GasMRel	GasTRel	GasMBrake	GasTBrake	WheelTurn	TotalStop	Co
 
 9	0	25.5		390		454		144		80			2230		0
 
+=======
+>>>>>>> master

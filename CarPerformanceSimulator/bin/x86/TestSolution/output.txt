@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Trail started at 12:16.32 on 11/27/2015
   Timer reported 284 ns
 Trial 0: 
@@ -100,3 +101,7 @@ Trial 9:
 	Total stop time: 2230ms
 	Collision Detected: 0
 
+=======
+Trail started at 9:54.26 on 12/7/2015
+  Timer reported 284 ns
+>>>>>>> master
