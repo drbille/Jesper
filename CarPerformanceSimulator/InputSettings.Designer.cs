@@ -420,6 +420,7 @@
             this.Controls.Add(this.JoyPanel);
             this.Controls.Add(this.Joystick1Info);
             this.Controls.Add(this.InputSelect);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "InputSettings";
             this.Text = "Input Settings";
             this.JoyPanel.ResumeLayout(false);

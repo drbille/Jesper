@@ -22,7 +22,6 @@ namespace CarPerformanceSimulator
                 keyboard = new Device(deviceInstance.InstanceGuid);
                 keyboard.SetCooperativeLevel(form, CooperativeLevelFlags.Background | CooperativeLevelFlags.NonExclusive);
             }
-
             keyboard.SetDataFormat(DeviceDataFormat.Keyboard);
             keyboard.Acquire();
         }

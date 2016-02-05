@@ -14,13 +14,13 @@ namespace CarPerformanceSimulator
     public partial class UserDisplay : Form
     {
         InputSettings inputSettings;
-        FormView mainDisplay;
+        Display mainDisplay;
         bool initialized = false;
         bool boxSet = false;
 
         CognitiveLoadSettings cogSettings;
 
-        public UserDisplay(FormView display)
+        public UserDisplay(Display display)
         {
             InitializeComponent();
 

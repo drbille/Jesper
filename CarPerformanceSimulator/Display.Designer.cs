@@ -1,6 +1,6 @@
 ﻿namespace CarPerformanceSimulator
 {
-    partial class FormView
+    partial class Display
     {
         /// <summary>
         /// Required designer variable.
@@ -99,21 +99,24 @@
             this.LatencyTimer.Interval = 500;
             this.LatencyTimer.Tick += new System.EventHandler(this.LatencyTimer_Tick);
             // 
-            // FormView
+            // Display
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(634, 612);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.RpathBound);
             this.Controls.Add(this.LpathBound);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.KeyPreview = true;
-            this.Name = "FormView";
+            this.Name = "Display";
             this.Text = "Car Performance Simulator";
+            this.Load += new System.EventHandler(this.Display_Load);
             this.ResizeBegin += new System.EventHandler(this.FormView_ResizeBegin);
             this.ResizeEnd += new System.EventHandler(this.FormView_ResizeEnd);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormView_Paint);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Display_Paint);
             this.Resize += new System.EventHandler(this.FormView_Resize);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

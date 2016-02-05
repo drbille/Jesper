@@ -1203,6 +1203,7 @@
             this.Controls.Add(this.angle_lbHelper);
             this.Controls.Add(this.acceleration_lbHelper);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "UserDisplay";
             this.Text = "Simulation Control";

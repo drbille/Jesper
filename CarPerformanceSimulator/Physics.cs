@@ -35,7 +35,7 @@ namespace CarPerformanceSimulator
 
         internal double transmissionEfficiency;
 
-        private FormView mainDisplay;
+        private Display mainDisplay;
         private UserDisplay dataReadout;
         private Car car = new _2015FordFusion();
 
@@ -45,7 +45,7 @@ namespace CarPerformanceSimulator
         SoundEffect sound;
         bool soundInit;
 
-        public Physics(FormView display, UserDisplay readout)
+        public Physics(Display display, UserDisplay readout)
         {
 
             dataReadout = readout;

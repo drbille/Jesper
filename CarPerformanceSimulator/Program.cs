@@ -15,7 +15,7 @@ namespace CarPerformanceSimulator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormView());
+            Application.Run(new Display());
         }
     }
 }

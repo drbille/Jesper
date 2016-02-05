@@ -12,7 +12,7 @@ namespace CarPerformanceSimulator
     public partial class InputSettings : Form
     {
         string[] info;
-        FormView mainDisplay;
+        Display mainDisplay;
         Device[] joystick;
         JoystickState[] state;
         DeviceCaps[] cps;
@@ -35,7 +35,7 @@ namespace CarPerformanceSimulator
         string[] axisName = new string[6];
 
 
-        public InputSettings(FormView display)
+        public InputSettings(Display display)
         {
             axisName[0] = "X";
             axisName[1] = "Y";
@@ -85,7 +85,7 @@ namespace CarPerformanceSimulator
 
                 extraAxis = new int[mainDisplay.getNumJoys()][];
                 buttons = new int[mainDisplay.getNumJoys()][];
-                info = new string[mainDisplay.getNumJoys()];
+                info = new string[2];//new string[mainDisplay.getNumJoys()];
 
                 controlInitalized = true;
 

@@ -1,0 +1,3 @@
+D:\GitHub\NeuRRo\NeuRRoDrive\CarPerformanceSimulator\bin\Release\CarPerformanceSimulator.exe.config
+D:\GitHub\NeuRRo\NeuRRoDrive\CarPerformanceSimulator\obj\x86\Release\CarPerformanceSimulator.exe
+D:\GitHub\NeuRRo\NeuRRoDrive\CarPerformanceSimulator\obj\x86\Release\CarPerformanceSimulator.pdb
