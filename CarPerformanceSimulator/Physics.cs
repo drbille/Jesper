@@ -75,6 +75,7 @@ namespace CarPerformanceSimulator
             }
             catch (Exception err)
             {
+
             }
         }
 
@@ -95,7 +96,15 @@ namespace CarPerformanceSimulator
             if (soundInit && oldRpm != rpm)
             {
                 soundInstance.Pause();
-                soundInstance.Pitch = (float)((double)rpm / 6500.0);
+                if((double)rpm / 6500.0 > 1)
+                {
+                    soundInstance.Pitch = 1;
+                }
+                else
+                {
+                    soundInstance.Pitch = (float)((double)rpm / 6500.0);
+                }
+
                 soundInstance.Volume = (float)(0.5 * (90 + (double)velocity) / 180.0);
                 soundInstance.Play();
             }
@@ -104,6 +113,7 @@ namespace CarPerformanceSimulator
             {
                 neutral = true;
                 dataReadout.Gear.Text = "N";
+                selectedGear = 1;
             }
             if (driveGear != 0)
             {

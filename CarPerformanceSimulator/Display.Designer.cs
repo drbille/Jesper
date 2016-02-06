@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.LpathBound = new System.Windows.Forms.Label();
             this.RpathBound = new System.Windows.Forms.Label();
-            this.speed_lb = new System.Windows.Forms.Label();
-            this.speed_lbHelper = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.LatencyTimer = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.speed_lbHelper = new System.Windows.Forms.Label();
+            this.speed_lb = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,29 +57,11 @@
             this.RpathBound.Size = new System.Drawing.Size(11, 612);
             this.RpathBound.TabIndex = 0;
             // 
-            // speed_lb
+            // LatencyTimer
             // 
-            this.speed_lb.BackColor = System.Drawing.Color.Black;
-            this.speed_lb.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.speed_lb.ForeColor = System.Drawing.Color.White;
-            this.speed_lb.Location = new System.Drawing.Point(116, 0);
-            this.speed_lb.Name = "speed_lb";
-            this.speed_lb.Size = new System.Drawing.Size(81, 24);
-            this.speed_lb.TabIndex = 12;
-            this.speed_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // speed_lbHelper
-            // 
-            this.speed_lbHelper.BackColor = System.Drawing.Color.Black;
-            this.speed_lbHelper.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.speed_lbHelper.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.speed_lbHelper.Location = new System.Drawing.Point(3, 0);
-            this.speed_lbHelper.Name = "speed_lbHelper";
-            this.speed_lbHelper.Size = new System.Drawing.Size(109, 24);
-            this.speed_lbHelper.TabIndex = 13;
-            this.speed_lbHelper.Text = "speed";
-            this.speed_lbHelper.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.speed_lbHelper.Visible = false;
+            this.LatencyTimer.Enabled = true;
+            this.LatencyTimer.Interval = 500;
+            this.LatencyTimer.Tick += new System.EventHandler(this.LatencyTimer_Tick);
             // 
             // panel1
             // 
@@ -87,17 +69,35 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.speed_lbHelper);
             this.panel1.Controls.Add(this.speed_lb);
-            this.panel1.Location = new System.Drawing.Point(432, 36);
+            this.panel1.Location = new System.Drawing.Point(633, 44);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(202, 26);
             this.panel1.TabIndex = 14;
             this.panel1.Visible = false;
             // 
-            // LatencyTimer
+            // speed_lbHelper
             // 
-            this.LatencyTimer.Enabled = true;
-            this.LatencyTimer.Interval = 500;
-            this.LatencyTimer.Tick += new System.EventHandler(this.LatencyTimer_Tick);
+            this.speed_lbHelper.BackColor = System.Drawing.Color.Black;
+            this.speed_lbHelper.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.speed_lbHelper.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.speed_lbHelper.Location = new System.Drawing.Point(179, 0);
+            this.speed_lbHelper.Name = "speed_lbHelper";
+            this.speed_lbHelper.Size = new System.Drawing.Size(109, 24);
+            this.speed_lbHelper.TabIndex = 13;
+            this.speed_lbHelper.Text = "speed";
+            this.speed_lbHelper.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.speed_lbHelper.Visible = false;
+            // 
+            // speed_lb
+            // 
+            this.speed_lb.BackColor = System.Drawing.Color.Black;
+            this.speed_lb.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.speed_lb.ForeColor = System.Drawing.Color.White;
+            this.speed_lb.Location = new System.Drawing.Point(292, 0);
+            this.speed_lb.Name = "speed_lb";
+            this.speed_lb.Size = new System.Drawing.Size(81, 24);
+            this.speed_lb.TabIndex = 12;
+            this.speed_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Display
             // 
@@ -109,7 +109,6 @@
             this.Controls.Add(this.RpathBound);
             this.Controls.Add(this.LpathBound);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.KeyPreview = true;
             this.Name = "Display";
             this.Text = "Car Performance Simulator";
@@ -127,10 +126,10 @@
 
         private System.Windows.Forms.Label LpathBound;
         private System.Windows.Forms.Label RpathBound;
-        private System.Windows.Forms.Label speed_lb;
-        private System.Windows.Forms.Label speed_lbHelper;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Timer LatencyTimer;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label speed_lbHelper;
+        private System.Windows.Forms.Label speed_lb;
     }
 }
 

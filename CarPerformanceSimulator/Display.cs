@@ -1,5 +1,5 @@
 ﻿/*
- * Authors: Ali M. Al Haddad (alhaddad@umich.edu), Jakob Rodseth (Jakob.Rodseth12@kzoo.edu)
+ * Author: Jakob Rodseth (Jakob.Rodseth12@kzoo.edu)
  * 
  * Changelog:
  *          
@@ -120,9 +120,8 @@ namespace CarPerformanceSimulator
         bool isHighPrecision = Stopwatch.IsHighResolution; //ADD CONTROL OVER POLLING TIME AND DO LATENCY CALUCLATIONS
 
         private bool RTtest; // Reaction Time Test start controller
-        private double gasMomentReleaseTime, gasTotalReleaseTime, gasMomentReleaseToBrakeTouchTime, gasTotalReleaseToBrakeTouchTime, wheelTurnTime, totalStopTime; //
+        private double gasMomentReleaseTime, gasTotalReleaseTime, gasMomentReleaseToBrakeTouchTime, gasTotalReleaseToBrakeTouchTime, trialStartToBrakeTime, wheelTurnTime, totalStopTime; //
 
-        private int speed_choice; // NEEDS CORRECT IMPLEMENTATION, ONLY KEYBOARD?  *ToDo
 
         public bool cognitiveLoadTest;
 
@@ -241,7 +240,6 @@ namespace CarPerformanceSimulator
             brakeValue = 0;
             triggerType = 0;
             object_iD = 0;
-            speed_choice = 0; // a person's choice of speed
             rTriggerMax = 10;
             rTriggerMin = 2;
             cognitiveLoadTest = false;
@@ -293,7 +291,7 @@ namespace CarPerformanceSimulator
             //fileName = DateTime.Today.Month + "-" + DateTime.Today.Day + "-" + DateTime.Today.Year + "_" + DateTime.Now.Hour + "-" + DateTime.Now.Minute + "-" + DateTime.Now.Second + "Trial.txt";
             System.IO.File.WriteAllText(fileName, "Trail started at " + DateTime.Now.Hour + ":" + DateTime.Now.Minute + "." + DateTime.Now.Second + " on " + DateTime.Today.Month + "/" + DateTime.Today.Day + "/" + DateTime.Today.Year + "\r\n" + UserDisplay.HighPrecision.Text + "\r\n");
             //fileNameRaw = DateTime.Today.Month + "-" + DateTime.Today.Day + "-" + DateTime.Today.Year + "_" + DateTime.Now.Hour + "-" + DateTime.Now.Minute + "-" + DateTime.Now.Second + "Trial_RAW.txt";
-            System.IO.File.WriteAllText(fileNameRaw, "Trial\tType\tStartSpeed\tGasMRel\tGasTRel\tGasMBrake\tGasTBrake\tWheelTurn\tTotalStop\tCollision\t\r\n");
+            System.IO.File.WriteAllText(fileNameRaw, "Trial\tType\tStartSpeed\tGasMRel\tGasTRel\tGasMBrake\tGasTBrake\tTrialTBrake\tTotalStop\tWheelTurn\tError\t\r\n");
             System.IO.File.WriteAllText(fileNameDumpPerTrial, "Thrtl\tBrke\tWjlDeg\tDGear\tRGear\tVel\tLaneDev\tRT\tCol\tTime\r\n");
             filePathSet = true;
 
@@ -428,11 +426,13 @@ namespace CarPerformanceSimulator
 
             cogLoadIndex = -1;
 
+            accelValue = 0;
             collision = 0;
             gasMomentReleaseTime = 0;
             gasMomentReleaseToBrakeTouchTime = 0;
             gasTotalReleaseTime = 0;
             gasTotalReleaseToBrakeTouchTime = 0;
+            trialStartToBrakeTime = 0;
             wheelTurnTime = 0;
             totalStopTime = 0;
             objectScale = (int)((double)this.Size.Width * 0.08);
@@ -514,13 +514,7 @@ namespace CarPerformanceSimulator
 
             if (object_iD == 0)
             {
-                if (Car_x < leadCar_X + xScale &&
-                    Car_x + xScale > leadCar_X &&
-                    Car_y < leadCar_y + objectScale &&
-                    Car_y + objectScale > leadCar_y)
-                {
-                    collision = 1;
-                }
+                checkForCollisionWithLeadCar();
             }
 
             if (RTstart)
@@ -549,17 +543,15 @@ namespace CarPerformanceSimulator
                     case 2:
                     case 3:
                         {
-                            if (Car_x < walkX + xScale &&
-                            Car_x + xScale > walkX &&
-                            Car_y < stationaryObjectY &&
-                            Car_y + objectScale > stationaryObjectY - objectScale)
-                            {
-                                collision = 1;
-                            }
+                            checkForCollisionWithObject();
                             stationaryObjectY = stationaryObjectYTotal - stationaryObjectYRTstart;
                             walkX -= 2;
                             break;
                         }
+                }
+                if(collision != 0)
+                {
+                    endTrial();
                 }
             }
             else if (collision != 0)
@@ -579,6 +571,28 @@ namespace CarPerformanceSimulator
             Invalidate(refreshDisplay);
 
 
+        }
+
+        private void checkForCollisionWithLeadCar()
+        {
+            if (Car_x < leadCar_X + xScale &&
+                    Car_x + xScale > leadCar_X &&
+                    Car_y < leadCar_y + objectScale &&
+                    Car_y + objectScale > leadCar_y)
+            {
+                collision = 1;
+            }
+        }
+
+        private void checkForCollisionWithObject()
+        {
+            if (Car_x < walkX + xScale &&
+                            Car_x + xScale > walkX &&
+                            Car_y < stationaryObjectY &&
+                            Car_y + objectScale > stationaryObjectY - objectScale)
+            {
+                collision = 1;
+            }
         }
 
         //causes lead car to brake
@@ -624,18 +638,27 @@ namespace CarPerformanceSimulator
                     if (isBrake)
                     {
                         rtStartBrake = true;
+                        gasMomentReleaseToBrakeTouchTime = -1;
+                        gasTotalReleaseToBrakeTouchTime = -1;
+                        trialStartToBrakeTime = -1;
                     }
                     if (cognitiveLoadTest)
                     {
-                        int i = 0;
+                        int i = 0,j = 0,t = 0;
                         foreach (bool b in cogLoad)
                         {
                             if (b)
                             {
                                 i++;
+                                j = t;
                             }
+                            t++;
                         }
-                        if (i > 1)
+                        if (i == 1)
+                        {
+                            cogLoadAction = cogLoadActions[j];
+                        }
+                        else if (i > 1)
                         {
                             bool randomChoice = false;
                             while (!randomChoice)
@@ -648,7 +671,6 @@ namespace CarPerformanceSimulator
                                     randomChoice = true;
                                 }
                             }
-
                         }
                         else
                         {
@@ -681,7 +703,14 @@ namespace CarPerformanceSimulator
 
                 if (rtStartGas && !RTgas)
                 {
-                    checkIfGasTimersTriggered();
+                    if(gasMomentReleaseTime == 0)
+                    {
+                        checkIfGasMomentTimersTriggered();
+                    }
+                    if(gasTotalReleaseTime == 0)
+                    {
+                        checkIfGasTotalTimersTriggered();
+                    }
                 }
 
                 if (isBrake && !RTbrake && !rtStartBrake)
@@ -690,36 +719,25 @@ namespace CarPerformanceSimulator
                     {
                         checkIfGasMomentToBrakeTimersTriggered();
                     }
-
                     if (gasTotalReleaseToBrakeTouchTime == 0)
                     {
                         checkIfGasTotalToBrakeTimersTriggered();
                     }
+                    if (trialStartToBrakeTime == 0)
+                    {
+                        checkIfTrialToBrakeTimersTriggered();
+                    }
                 }
             }
 
-            if (cognitiveLoadTest && cogLoadAction != cogLoadActions[(int)cogLoadActionsEnum.brake])
+            if (cognitiveLoadTest && cogLoadAction != cogLoadActions[(int)cogLoadActionsEnum.brake] && wheelTurnTime == 0)
             {
                 checkIfWheelTurnTimerTriggered();
             }
 
             if (velocity == 0 || (cognitiveLoadTest && (cogLoadAction == cogLoadActions[(int)cogLoadActionsEnum.left] || cogLoadAction == cogLoadActions[(int)cogLoadActionsEnum.right]) && (wheelTurnTime != 0)))
             {
-                endOfTrialInvalidateUntriggeredValues();
-
-                //stop timers, reset, and stop sound
-                stopwatch.Stop();
-                totalStopTime = stopwatch.ElapsedMilliseconds;
-                stopwatch.Reset();
-                RTtest = false;
-                tick = false;
-                physicsEngine.stopSound();
-
-                endOfTrialgerWrite();
-
-                trigger = false;
-
-                trialSeriesResetOrTerminate();
+                endTrial();
             }
         }
 
@@ -731,12 +749,16 @@ namespace CarPerformanceSimulator
             }
         }
 
-        private void checkIfGasTimersTriggered()
+        private void checkIfGasMomentTimersTriggered()
         {
             if (gasMomentReleaseTime == 0 && (rtStartAccelPosition - accelValue) > ((double)joyAxisMax[pedalJoy] * 0.1))
             {
                 gasMomentReleaseTime = stopwatch.ElapsedMilliseconds;
             }
+        }
+
+        private void checkIfGasTotalTimersTriggered()
+        {
             if (gasTotalReleaseTime == 0 && !isAccel)
             {
                 gasTotalReleaseTime = stopwatch.ElapsedMilliseconds;
@@ -767,6 +789,15 @@ namespace CarPerformanceSimulator
                 gasTotalReleaseToBrakeTouchTime = -1;
             }
             RTbrake = true;
+        }
+
+        private void checkIfTrialToBrakeTimersTriggered()
+        {
+            if (trialStartToBrakeTime == 0)
+            {
+                trialStartToBrakeTime = stopwatch.ElapsedMilliseconds;
+            }
+            rtStartBrake = true;
         }
 
         private void checkIfWheelTurnTimerTriggered()
@@ -806,7 +837,7 @@ namespace CarPerformanceSimulator
             }
         }
 
-        private void endOfTrialgerWrite()
+        private void endOfTrialWrite()
         {
             if (filePathSet == true)
             {
@@ -819,9 +850,10 @@ namespace CarPerformanceSimulator
                            ": \r\n\tType: " + object_iD +
                            "\r\n\tStart Speed: " + Math.Round(rtStartSpeed, 1) +
                            " Meters/Sec\r\n\tTrial start to gas moment release time: " + gasMomentReleaseTime +
-                           "\r\n\tTrial start to gas total release time: " + gasTotalReleaseTime +
+                           "ms\r\n\tTrial start to gas total release time: " + gasTotalReleaseTime +
                            "ms\r\n\tGas moment release to brake time: " + gasMomentReleaseToBrakeTouchTime +
                            "ms\r\n\tGas total release to brake time: " + gasTotalReleaseToBrakeTouchTime +
+                           "ms\r\n\tTrial start to brake time: " + trialStartToBrakeTime +
                            "ms\r\n\tTotal stop time: " + totalStopTime +
                            "ms\r\n\tCollision Detected: " + collision + "\r\n";
                     }
@@ -835,8 +867,9 @@ namespace CarPerformanceSimulator
                             output += "\r\n\tTrial start to gas moment release time: " + gasMomentReleaseTime +
                            "\r\n\tTrial start to gas total release time: " + gasTotalReleaseTime +
                            "ms\r\n\tGas moment release to brake time: " + gasMomentReleaseToBrakeTouchTime +
-                           "ms\r\n\tGas total release to brake time: " + gasTotalReleaseToBrakeTouchTime + "ms\r\n\t"
-                           + "Total stop time: " + totalStopTime;
+                           "ms\r\n\tGas total release to brake time: " + gasTotalReleaseToBrakeTouchTime + 
+                           "ms\r\n\tTrial start to brake time: " + trialStartToBrakeTime +
+                           "ms\r\n\t" + "Total stop time: " + totalStopTime;
                         }
                         if (cogLoadAction != cogLoadActions[(int)cogLoadActionsEnum.brake])
                         {
@@ -852,27 +885,20 @@ namespace CarPerformanceSimulator
                     if (!cognitiveLoadTest)
                     {
                         output = trialCount + "\t" + object_iD + "\t" + Math.Round(rtStartSpeed, 1) +
-                        "\t" + gasMomentReleaseTime + "\t" + gasTotalReleaseTime + "\t" + gasMomentReleaseToBrakeTouchTime + "\t" + gasTotalReleaseToBrakeTouchTime + "\t" + totalStopTime + "\t" + collision + "\r\n";
+                        "\t" + gasMomentReleaseTime + "\t" + gasTotalReleaseTime + "\t" + gasMomentReleaseToBrakeTouchTime + "\t" + gasTotalReleaseToBrakeTouchTime + "\t" + trialStartToBrakeTime +"\t" + totalStopTime + "\t" + "-2" + "\t" + collision;
                     }
                     else
                     {
                         output = trialCount + "\t" + object_iD;
-                        /* if (cogLoadBrake)
-                             output += "B";
-                         if (cogLoadMoveLeft)
-                             output += "L";
-                         if (cogLoadMoveRight)
-                             output += "R";
-                             */
-                        output += cogLoadIndex;
+                        output += " CL-" + cogLoadIndex;
                         output += "\t" + Math.Round(rtStartSpeed, 1) + "\t";
                         if (cogLoadAction != cogLoadActions[(int)cogLoadActionsEnum.right] && cogLoadAction != cogLoadActions[(int)cogLoadActionsEnum.left])
                         {
-                            output += gasMomentReleaseTime + "\t" + gasTotalReleaseTime + "\t" + gasMomentReleaseToBrakeTouchTime + "\t" + gasTotalReleaseToBrakeTouchTime;
+                            output += gasMomentReleaseTime + "\t" + gasTotalReleaseTime + "\t" + gasMomentReleaseToBrakeTouchTime + "\t" + gasTotalReleaseToBrakeTouchTime + "\t" + trialStartToBrakeTime + "\t" + totalStopTime;
                         }
                         else
                         {
-                            output += "-2" + "\t" + "-2" + "\t" + "-2" + "\t" + "-2";
+                            output += "-2" + "\t" + "-2" + "\t" + "-2" + "\t" + "-2" + "\t" + "-2" + "\t" + "-2";
                         }
                         if (cogLoadAction != cogLoadActions[(int)cogLoadActionsEnum.brake])
                         {
@@ -883,7 +909,7 @@ namespace CarPerformanceSimulator
                             output += "\t" + "-2";
                         }
 
-                        output += "\t" + totalStopTime + "\t" + collision + "\r\n";
+                        output += "\t" + collision;
                     }
                     file.WriteLine(output);
                 }
@@ -907,6 +933,25 @@ namespace CarPerformanceSimulator
                 UserDisplay.progressBar.Increment(1);
                 currentTrial = -1;
             }
+        }
+
+        private void endTrial()
+        {
+            endOfTrialInvalidateUntriggeredValues();
+
+            //stop timers, reset, and stop sound
+            stopwatch.Stop();
+            totalStopTime = stopwatch.ElapsedMilliseconds;
+            stopwatch.Reset();
+            RTtest = false;
+            tick = false;
+            physicsEngine.stopSound();
+
+            endOfTrialWrite();
+
+            trigger = false;
+
+            trialSeriesResetOrTerminate();
         }
 
         private void pollingTick()
@@ -959,13 +1004,13 @@ namespace CarPerformanceSimulator
 
                     if (key.Equals(Key.LeftArrow) || key.Equals(Key.Left))
                     {
-                        degree = -10;
+                        degree = -10 * ((double)steeringSensitivity / 50.0);
                         pressed[2] = true;
                         continue;
                     }
                     else if (key.Equals(Key.RightArrow) || key.Equals(Key.Right))
                     {
-                        degree = 10;
+                        degree = 10 * ((double)steeringSensitivity / 50.0);
                         pressed[2] = true;
                         continue;
                     }
@@ -1034,11 +1079,11 @@ namespace CarPerformanceSimulator
             // show statstics of direction (up or down)
             if (velocity >= 0)
             {
-                UserDisplay.direction_lb.Text = "Up";
+                UserDisplay.direction_lb.Text = "Forward";
             }
             else
             {
-                UserDisplay.direction_lb.Text = "Down";
+                UserDisplay.direction_lb.Text = "Backward";
             }
 
             UserDisplay.break_lb.Text = Convert.ToString(brakeValue);
@@ -1100,6 +1145,8 @@ namespace CarPerformanceSimulator
         {
             oldWidth = this.Size.Width;
             oldHeight = this.Size.Height;
+
+            Console.Write("Resize Begin\n"); //debug
         }
 
         private void FormView_ResizeEnd(object sender, System.EventArgs e)
@@ -1114,6 +1161,8 @@ namespace CarPerformanceSimulator
                 resizeEnd(300, 300, window);
             }
             Invalidate();
+
+            Console.Write("Resize end\n"); //debug
         }
 
         private void resizeEnd(double width, double height, Control window)
@@ -1123,71 +1172,40 @@ namespace CarPerformanceSimulator
             leadCar_X = ((int)window.Size.Width * leadCar_X) / (int)width;
             leadCar_y = ((int)window.Size.Height * leadCar_y) / (int)height;
             centerLinesY = ((int)window.Size.Height * centerLinesY) / (int)height;
+
             sizeStaticObjects(window);
+
             objectScale = (int)((double)window.Size.Width * 0.08);
             xScale = objectScale / 2;
+
             oldWidth = window.Size.Width;
             oldHeight = window.Size.Height;
+            Console.Write("Resize end helper\n"); //debug
         }
 
         private void FormView_Resize(object sender, EventArgs e)
         {
             Control window = (Control)sender;
-            //When window state changes
-            if (WindowState != LastWindowState)
-            {
-                LastWindowState = WindowState;
-                if (WindowState == FormWindowState.Maximized)
-                {
-                    try
-                    {
-                        fullResizeMax(oldWidth, oldHeight, window);
-                    }
-                    catch (Exception)
-                    {
-                        fullResizeMax(300, 300, window);
-                    }
-
-                }
-                else if (WindowState == FormWindowState.Normal)
-                {
-                    try
-                    {
-                        fullResizeMin(oldWidth, oldHeight, window);
-                    }
-                    catch (Exception)
-                    {
-                        fullResizeMin(300, 300, window);
-                    }
-                }
-                objectScale = (int)((double)this.Size.Width * 0.08);
+            fullResize(oldWidth, oldHeight, window);
+                 objectScale = (int)((double)this.Size.Width * 0.08);
                 xScale = objectScale / 2;
-            }
+            
             Invalidate();
         }
 
-        private void fullResizeMax(double width, double height, Control window)
+        private void fullResize(double width, double height, Control window)
         {
             Car_x = ((int)window.Size.Width * Car_x) / (int)width;
             Car_y = ((int)window.Size.Height * Car_y) / (int)height;
             leadCar_X = ((int)window.Size.Width * leadCar_X) / (int)width;
             leadCar_y = ((int)window.Size.Height * leadCar_y) / (int)height;
-            Car_x = ((int)window.Size.Width * Car_x) / (int)width;
-            Car_y = ((int)window.Size.Height * Car_y) / (int)height;
-            leadCar_X = ((int)window.Size.Width * leadCar_X) / (int)width;
-            leadCar_y = ((int)window.Size.Height * leadCar_y) / (int)height;
-            sizeStaticObjects(window);
-        }
 
-        private void fullResizeMin(double width, double height, Control window)
-        {
-            Car_x = ((int)width * Car_x) / (int)window.Size.Width;
-            Car_y = ((int)height * Car_y) / (int)window.Size.Height;
-            leadCar_X = ((int)width * leadCar_X) / (int)window.Size.Width;
-            leadCar_y = ((int)height * leadCar_y) / (int)window.Size.Height;
             sizeStaticObjects(window);
+
             oldWidth = window.Size.Width;
             oldHeight = window.Size.Height;
+
+            Console.Write("Full Resize MAX"); //debug
         }
 
         private void sizeStaticObjects(Control window)

@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="CarPerformanceSimulator.exe" version="1.0.0.16" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
+  <asmv1:assemblyIdentity name="NeuRRoDrive.exe" version="1.0.0.20" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="CarPerformanceSimulator" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
-    <commandLine file="CarPerformanceSimulator.exe" parameters="" />
+    <assemblyIdentity name="NeuRRoDrive" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="NeuRRoDrive.exe" parameters="" />
   </entryPoint>
   <trustInfo>
     <security>
@@ -39,18 +39,6 @@
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
       <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CarPerformanceSimulator.exe" size="77720">
-      <assemblyIdentity name="CarPerformanceSimulator" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>yPWWG36BQK0LE3evPbiZnuxfQoQ=</dsig:DigestValue>
-      </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
@@ -89,6 +77,18 @@
       </hash>
     </dependentAssembly>
   </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NeuRRoDrive.exe" size="78744">
+      <assemblyIdentity name="NeuRRoDrive" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>RjoFsnkYn1QSvMdiwr8Ix3L3QPo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
   <file name="Car.png" size="68727">
     <hash>
       <dsig:Transforms>
@@ -96,15 +96,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>T9JI+v489GTNTPIEPx8LaHHv1N8=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="CarPerformanceSimulator.exe.config" size="219">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>4SrEqCatZzC0qhL+u0cqk30V2xA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="deer.jpg" size="26603">
@@ -150,6 +141,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>qmufJSTLB7LEsnCO+utXqLEaDjc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="NeuRRoDrive.exe.config" size="219">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>4SrEqCatZzC0qhL+u0cqk30V2xA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="pedestrian.jpg" size="26490">
