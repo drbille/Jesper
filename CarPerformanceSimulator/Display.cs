@@ -323,6 +323,7 @@ namespace CarPerformanceSimulator
                 if (triggerType == 1 && velocity >= xSpeed && !validSpeed)
                 {
                     validSpeed = true;
+                    Console.WriteLine("validSpeed");
                 }
 
                 if (randomNum > 0 && !trigger && validSpeed)
@@ -661,20 +662,21 @@ namespace CarPerformanceSimulator
                         else if (i > 1)
                         {
                             bool randomChoice = false;
+                            Random ran = new Random();
+                            cogLoadIndex = ran.Next() % t;
                             while (!randomChoice)
                             {
-                                Random ran = new Random();
-                                cogLoadIndex = ran.Next() % i;
                                 if (cogLoad[cogLoadIndex])
                                 {
                                     cogLoadAction = cogLoadActions[cogLoadIndex];
                                     randomChoice = true;
                                 }
+                                cogLoadIndex = cogLoadIndex + 1 % t;
                             }
                         }
                         else
                         {
-                            //exception
+                            throw new Exception();                            //exception
                         }
                         if (((cogLoadAction == cogLoadActions[(int)cogLoadActionsEnum.brakeAndLeft] || cogLoadAction == cogLoadActions[(int)cogLoadActionsEnum.left]) && (degree > -2))
                          || ((cogLoadAction == cogLoadActions[(int)cogLoadActionsEnum.right] || cogLoadAction == cogLoadActions[(int)cogLoadActionsEnum.brakeAndRight]) && (degree < 2)))

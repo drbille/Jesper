@@ -129,18 +129,26 @@ namespace CarPerformanceSimulator
                 RandomTrigger.Show();
             }
             mainDisplay.triggerType = CarActivation.SelectedIndex;
+            if(initialized)
+            mainDisplay.Restart();
         }
 
         private void xTrialsSet_ValueChanged(object sender, EventArgs e)
         {
             mainDisplay.xTrials = (int)xTrialsSet.Value;
             progressBar.Maximum = (int)xTrialsSet.Value;
+            if (initialized)
+            mainDisplay.Restart();
         }
 
         private void xSpeedSet_ValueChanged(object sender, EventArgs e)
         {
             if (initialized)
+            {
                 mainDisplay.xSpeed = (int)((double)xSpeedSet.Value * 0.44704);
+                mainDisplay.Restart();
+            }
+
         }
 
         private void BrakeForceScroll_Scroll(object sender, EventArgs e)

@@ -144,3 +144,6 @@ D:\GitHub\NeuRRo\NeuRRoDrive\CarPerformanceSimulator\obj\x86\Debug\NeuRRoDrive.e
 D:\GitHub\NeuRRo\NeuRRoDrive\CarPerformanceSimulator\obj\x86\Debug\NeuRRoDrive.application
 D:\GitHub\NeuRRo\NeuRRoDrive\CarPerformanceSimulator\obj\x86\Debug\NeuRRoDrive.exe
 D:\GitHub\NeuRRo\NeuRRoDrive\CarPerformanceSimulator\obj\x86\Debug\NeuRRoDrive.pdb
+D:\GitHub\NeuRRo\NeuRRoDrive\CarPerformanceSimulator\bin\Debug\Microsoft.DirectX.dll
+D:\GitHub\NeuRRo\NeuRRoDrive\CarPerformanceSimulator\bin\Debug\Microsoft.DirectX.DirectInput.xml
+D:\GitHub\NeuRRo\NeuRRoDrive\CarPerformanceSimulator\bin\Debug\Microsoft.DirectX.xml
