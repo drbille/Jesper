@@ -278,6 +278,7 @@ namespace CarPerformanceSimulator
                 long nanosecPerTick = (1000L * 1000L * 1000L) / frequency;
                 UserDisplay.HighPrecision.Text = "  Timer reported " + nanosecPerTick + " ns";
             }
+
             Restart();
 
             physicsEngine = new Physics(this, UserDisplay);
