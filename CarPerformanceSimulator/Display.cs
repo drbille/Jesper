@@ -1,53 +1,22 @@
 ﻿/*
- * Author: Jakob Rodseth (Jakob.Rodseth12@kzoo.edu)
+ * This file is part of
+ *
+ * Copyright 2014-2016 University of Michigan NeuRRo Lab. All Rights Reserved.
+ * <http://www.neurro-lab.engin.umich.edu/>
+ *
+ * is free software: you may redistribute it and/or modify it 
+ * under the terms of the GNU General Public License as published
+ * by the Free Software Foundation, version 2 of the License
+ *
+ * is distributed in the hope that it will be useful but
+ * WITHOUT ANY WARRANTY; without even the implied warranty
+ * of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * <http://www.gnu.org/licenses>
+ *
+ * Managed by: Jakob Rodseth (Jrodseth12@gmail.com)
  * 
- * Changelog:
- *          
- * 6/16/2015, Jakob Rodseth
- *          Removed some unused code.
- *          Migrated variable display fields to UserDisplay form.
- *          Added Joystick Interface.
- * 
- * 6/17/2015, Jakob Rodseth
- *          Implemented accelerator and brake joystick functionality.
- *          
- * 6/18/2015 and 6/19/2015, Jakob Rodseth
- *          Updated and revised variable names and comments.         
- *          Changed hardcoded joystick axis max and min values to be read automatically.
- *          Implemented joystick steering control.
- *          
- * 6/19/2015, Jakob Rodseth
- *          Revised stopwatches and reaction timer tick code.
- *          Revised reaction time test implementation.
- *          Added user control over input selection (keyboard or joystick)
- *          Added autodetect axis
- *          
- * 6/22/2015, Jakob Rodseth
- *          Added restart function
- *          Added resizing support
- *          Added simple gear select and creep
- * 
- * 6/23/2015, Jakob Rodseth
- *          Simplified stopwatch and reaction test code
- *          Added gear select mapping and auto detect
- *          Added low resolution stopwatch warning
- *          Added UI for controlling lead object and behaviour
- *          
- * 6/24/2015, Jakob Rodseth
- *          Began rewrite of physics engine
- *          
- * 6/26/2015, Jakob Rodseth
- *          Merged Timers
- *          Implemented UI control for changing scenario
- *          Increased framerate
- *          
- * 6/29/2015, Jakob Rodseth
- *          Migrated physics engine to new class
- *          Created stubs for complete physics simulation
- *          Variables and methods for full simulation
- *          
- *          
- * Purpose: UROP project 2014-2015 in the NeuRRo Lab
  */
 
 using System;

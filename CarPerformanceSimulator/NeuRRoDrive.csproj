@@ -200,6 +200,7 @@
     <Content Include="Car.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="COPYING.txt" />
     <Content Include="deer.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
