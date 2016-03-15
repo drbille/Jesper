@@ -8,13 +8,13 @@
     <ProjectGuid>{4F95D1F1-45A4-4430-B5BE-0E323568A2D7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CarPerformanceSimulator</RootNamespace>
-    <AssemblyName>CarPerformanceSimulator</AssemblyName>
+    <RootNamespace>NeuRRoDrive</RootNamespace>
+    <AssemblyName>NeuRRoDrive</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>G:\CarSimulatorTestBuilds\</PublishUrl>
+    <PublishUrl>C:\Users\User\Documents\Rodseth\GIT\NeuRRo\NeuRRoDrive\Install\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -24,7 +24,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>13</ApplicationRevision>
+    <ApplicationRevision>23</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -179,6 +179,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UserDisplay.resx">
       <DependentUpon>UserDisplay.cs</DependentUpon>
@@ -199,6 +200,7 @@
     <Content Include="Car.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="COPYING.txt" />
     <Content Include="deer.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

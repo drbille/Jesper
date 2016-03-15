@@ -384,7 +384,7 @@
             // 
             this.stop_lb1.BackColor = System.Drawing.SystemColors.Control;
             this.stop_lb1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.stop_lb1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stop_lb1.Font = new System.Drawing.Font("Calibri", 10F);
             this.stop_lb1.ForeColor = System.Drawing.Color.Black;
             this.stop_lb1.Location = new System.Drawing.Point(106, 81);
             this.stop_lb1.Name = "stop_lb1";
@@ -396,7 +396,7 @@
             // 
             this.g2b_lb1.BackColor = System.Drawing.SystemColors.Control;
             this.g2b_lb1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.g2b_lb1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.g2b_lb1.Font = new System.Drawing.Font("Calibri", 10F);
             this.g2b_lb1.ForeColor = System.Drawing.Color.Black;
             this.g2b_lb1.Location = new System.Drawing.Point(106, 57);
             this.g2b_lb1.Name = "g2b_lb1";
@@ -408,7 +408,7 @@
             // 
             this.gas_lb1.BackColor = System.Drawing.SystemColors.Control;
             this.gas_lb1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.gas_lb1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gas_lb1.Font = new System.Drawing.Font("Calibri", 10F);
             this.gas_lb1.ForeColor = System.Drawing.Color.Black;
             this.gas_lb1.Location = new System.Drawing.Point(106, 33);
             this.gas_lb1.Name = "gas_lb1";
@@ -420,7 +420,7 @@
             // 
             this.RT_lb1.BackColor = System.Drawing.SystemColors.Control;
             this.RT_lb1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.RT_lb1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RT_lb1.Font = new System.Drawing.Font("Calibri", 10F);
             this.RT_lb1.ForeColor = System.Drawing.Color.Black;
             this.RT_lb1.Location = new System.Drawing.Point(106, 9);
             this.RT_lb1.Name = "RT_lb1";
@@ -1070,9 +1070,19 @@
             // 
             // SteeringWheelSenseSet
             // 
+            this.SteeringWheelSenseSet.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.SteeringWheelSenseSet.Location = new System.Drawing.Point(10, 610);
+            this.SteeringWheelSenseSet.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
             this.SteeringWheelSenseSet.Minimum = new decimal(new int[] {
-            10,
+            5,
             0,
             0,
             0});
@@ -1080,7 +1090,7 @@
             this.SteeringWheelSenseSet.Size = new System.Drawing.Size(120, 20);
             this.SteeringWheelSenseSet.TabIndex = 59;
             this.SteeringWheelSenseSet.Value = new decimal(new int[] {
-            10,
+            50,
             0,
             0,
             0});
@@ -1089,12 +1099,12 @@
             // SteeringWheelSensScroll
             // 
             this.SteeringWheelSensScroll.Location = new System.Drawing.Point(0, 575);
-            this.SteeringWheelSensScroll.Maximum = 100;
-            this.SteeringWheelSensScroll.Minimum = 10;
+            this.SteeringWheelSensScroll.Maximum = 300;
+            this.SteeringWheelSensScroll.Minimum = 5;
             this.SteeringWheelSensScroll.Name = "SteeringWheelSensScroll";
             this.SteeringWheelSensScroll.Size = new System.Drawing.Size(420, 45);
             this.SteeringWheelSensScroll.TabIndex = 58;
-            this.SteeringWheelSensScroll.Value = 10;
+            this.SteeringWheelSensScroll.Value = 50;
             this.SteeringWheelSensScroll.Scroll += new System.EventHandler(this.SteeringWheelSensScroll_Scroll);
             // 
             // label6
@@ -1203,6 +1213,7 @@
             this.Controls.Add(this.angle_lbHelper);
             this.Controls.Add(this.acceleration_lbHelper);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "UserDisplay";
             this.Text = "Simulation Control";

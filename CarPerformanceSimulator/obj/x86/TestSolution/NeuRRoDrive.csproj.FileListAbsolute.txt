@@ -26,3 +26,34 @@ C:\Users\PM&R\Dropbox\Rodseth\Driving Simulator\CarPerformanceSimulator\obj\x86\
 C:\Users\PM&R\Dropbox\Rodseth\Driving Simulator\CarPerformanceSimulator\obj\x86\TestSolution\NeuRRoDrive.csproj.GenerateResource.Cache
 C:\Users\PM&R\Dropbox\Rodseth\Driving Simulator\CarPerformanceSimulator\obj\x86\TestSolution\CarPerformanceSimulator.exe.manifest
 C:\Users\PM&R\Dropbox\Rodseth\Driving Simulator\CarPerformanceSimulator\obj\x86\TestSolution\CarPerformanceSimulator.application
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\bin\x86\TestSolution\CarPerformanceSimulator.exe.config
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\obj\x86\TestSolution\CarPerformanceSimulator.exe
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\obj\x86\TestSolution\CarPerformanceSimulator.pdb
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\obj\x86\TestSolution\NeuRRoDrive.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\obj\x86\TestSolution\CarPerformanceSimulator.CognitiveLoadSettings.resources
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\obj\x86\TestSolution\CarPerformanceSimulator.FormView.resources
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\obj\x86\TestSolution\CarPerformanceSimulator.InputSettings.resources
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\obj\x86\TestSolution\CarPerformanceSimulator.Properties.Resources.resources
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\obj\x86\TestSolution\CarPerformanceSimulator.UserDisplay.resources
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\obj\x86\TestSolution\NeuRRoDrive.csproj.GenerateResource.Cache
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\bin\x86\TestSolution\Car.png
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\bin\x86\TestSolution\deer.jpg
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\bin\x86\TestSolution\engineIdleLoopAmp1.wav
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\bin\x86\TestSolution\frontCar.png
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\bin\x86\TestSolution\frontCar_Braking.png
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\bin\x86\TestSolution\NeedleBig.png
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\bin\x86\TestSolution\pedestrian.jpg
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\bin\x86\TestSolution\SpeedometerBlankScaled.png
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\bin\x86\TestSolution\stop_sign.jpg
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\bin\x86\TestSolution\TachometerBlankScaled.png
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\bin\x86\TestSolution\CarPerformanceSimulator.exe.manifest
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\bin\x86\TestSolution\CarPerformanceSimulator.application
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\bin\x86\TestSolution\CarPerformanceSimulator.exe
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\bin\x86\TestSolution\CarPerformanceSimulator.pdb
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\bin\x86\TestSolution\Microsoft.DirectX.DirectInput.dll
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\bin\x86\TestSolution\Microsoft.Xna.Framework.dll
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\bin\x86\TestSolution\Microsoft.DirectX.dll
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\bin\x86\TestSolution\Microsoft.DirectX.DirectInput.xml
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\bin\x86\TestSolution\Microsoft.DirectX.xml
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\obj\x86\TestSolution\CarPerformanceSimulator.exe.manifest
+C:\Users\User\Documents\Rodseth\GIT\NeuRRo\CarPerformanceSimulator\obj\x86\TestSolution\CarPerformanceSimulator.application

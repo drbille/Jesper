@@ -1,4 +1,26 @@
-﻿using System;
+﻿/*
+ * This file is part of NeuRRoDrive
+ *
+ * Copyright 2014-2016 University of Michigan NeuRRo Lab. All Rights Reserved.
+ * <http://www.neurro-lab.engin.umich.edu/>
+ *
+ * NeuRRoDrive is free software: you may redistribute it and/or modify it 
+ * under the terms of the GNU General Public License as published
+ * by the Free Software Foundation, either version 3 of the License, or
+ * any later version.
+ *
+ * NeuRRoDrive is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty
+ * of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * <http://www.gnu.org/licenses>
+ *
+ * Managed by: Jakob Rodseth (Jrodseth12@gmail.com)
+ * 
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,16 +35,14 @@ namespace CarPerformanceSimulator
         DeviceList gameControllerList = Manager.GetDevices(DeviceClass.GameControl, EnumDevicesFlags.AttachedOnly);
         private JoystickState[] state;
 
-        public void poll()
+        public void poll(int joy)
         {
-            for (int i = 0; i < gameControllerList.Count; i++)
-            {
-                try
-                {
+            try
+                { 
                     // poll the joystick
-                    joystick[i].Poll();
-                    // update the joystick state field
-                    UpdateJoystick(i);
+                    joystick[joy].Poll();
+                // update the joystick state field
+                UpdateJoystick(joy);
                 }
                 catch (Exception err)
                 {
@@ -30,7 +50,6 @@ namespace CarPerformanceSimulator
                     // was it unplugged or locked by another application?
                     //Debug.WriteLine("Joystick Connection Lost");
                 }
-            }
         }
 
         private void UpdateJoystick(int index)

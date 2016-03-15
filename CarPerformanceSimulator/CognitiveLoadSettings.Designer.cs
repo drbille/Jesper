@@ -39,8 +39,8 @@
             "Move Left",
             "Move Right",
             "Brake",
-            "Move Right + Brake",
-            "Move Left + Brake"});
+            "Move Left + Brake",
+            "Move Right + Brake"});
             this.OptionsList.Location = new System.Drawing.Point(0, 0);
             this.OptionsList.Name = "OptionsList";
             this.OptionsList.Size = new System.Drawing.Size(221, 79);
@@ -53,6 +53,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(221, 79);
             this.Controls.Add(this.OptionsList);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CognitiveLoadSettings";
             this.Text = "Cognitive Load Settings";
             this.ResumeLayout(false);

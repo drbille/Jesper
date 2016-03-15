@@ -392,6 +392,7 @@
             this.Joystick2Info.Text = "No 2nd Joystick";
             this.Joystick2Info.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Joystick2Info.Visible = false;
+            this.Joystick2Info.Click += new System.EventHandler(this.Joystick2Info_Click);
             // 
             // KeyboardOutput
             // 
@@ -420,6 +421,7 @@
             this.Controls.Add(this.JoyPanel);
             this.Controls.Add(this.Joystick1Info);
             this.Controls.Add(this.InputSelect);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "InputSettings";
             this.Text = "Input Settings";
             this.JoyPanel.ResumeLayout(false);

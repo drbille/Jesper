@@ -42,14 +42,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CarPerformanceSimulator.exe" size="72192">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CarPerformanceSimulator.exe" size="71576">
       <assemblyIdentity name="CarPerformanceSimulator" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>cu+qCQL+Csn+RSxwNDdEeYSELGE=</dsig:DigestValue>
+<<<<<<< HEAD
+        <dsig:DigestValue>/MHEjKwVOwqbuqKRvdWxh5Y0amQ=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>/MJVpVXKCIkIn3VEOSMynI9GXYk=</dsig:DigestValue>
+>>>>>>> master
       </hash>
     </dependentAssembly>
   </dependency>
