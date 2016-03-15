@@ -338,6 +338,9 @@ namespace CarPerformanceSimulator
             }
         }
 
-        
+        private void Joystick2Info_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

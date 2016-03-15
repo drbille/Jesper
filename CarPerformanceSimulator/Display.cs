@@ -1,14 +1,15 @@
 ﻿/*
- * This file is part of
+ * This file is part of NeuRRoDrive
  *
  * Copyright 2014-2016 University of Michigan NeuRRo Lab. All Rights Reserved.
  * <http://www.neurro-lab.engin.umich.edu/>
  *
- * is free software: you may redistribute it and/or modify it 
+ * NeuRRoDrive is free software: you may redistribute it and/or modify it 
  * under the terms of the GNU General Public License as published
- * by the Free Software Foundation, version 2 of the License
+ * by the Free Software Foundation, either version 3 of the License, or
+ * any later version.
  *
- * is distributed in the hope that it will be useful but
+ * NeuRRoDrive is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty
  * of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -244,7 +245,7 @@ namespace CarPerformanceSimulator
             else
             {
                 long frequency = Stopwatch.Frequency;
-                long nanosecPerTick = (1000L * 1000L * 1000L) / frequency;
+                long nanosecPerTick = (1000000000L) / frequency;
                 UserDisplay.HighPrecision.Text = "  Timer reported " + nanosecPerTick + " ns";
             }
 

@@ -35,6 +35,7 @@ namespace CarPerformanceSimulator
     {
         bool initialized = false;
         Display main;
+
         public CognitiveLoadSettings(Display mainDisplay)
         {
             InitializeComponent();
@@ -43,10 +44,16 @@ namespace CarPerformanceSimulator
             int i = 0;
             foreach(bool b in mainDisplay.cogLoad)
             {
-                OptionsList.SetSelected(i, mainDisplay.cogLoad[i]);
+                if(mainDisplay.cogLoad[i])
+                {
+                    OptionsList.SetItemCheckState(i, CheckState.Checked);
+                }
+                else
+                {
+                    OptionsList.SetItemCheckState(i, CheckState.Unchecked);
+                }
                 i++;
             }
-
             initialized = true;
         }
 
