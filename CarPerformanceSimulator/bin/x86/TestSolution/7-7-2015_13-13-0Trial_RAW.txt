@@ -1,5 +1,0 @@
-Trial	Type	Start_Speed	Start_To_Gas	Gas_To_Brake	Total_Stop	Collision	
-0	1	2.9		-1		-1		2562		1
-
-1	1	4.1		-1		-1		19		1
-
